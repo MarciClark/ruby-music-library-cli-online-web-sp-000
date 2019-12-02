@@ -22,20 +22,21 @@ class MusicLibraryController
     user_input = gets.strip
     if input != exit
 
-    case user_input
-      when "list songs"
-        self.list_songs
-      when "list artists"
-        self.list_artists
-      when "list genres"
-        self.list_genres
-      when "list artist"
-        self.list_songs_by_artist
-      when "list genre"
-        self.list_songs_by_genre
-      when "play song"
-        self.play_song
-      end
+    case input
+        when "list songs"
+          list_songs
+        when "list artists"
+          list_artists
+        when "list genres"
+          list_genres
+        when "list artist"
+          list_songs_by_artist
+        when "list genre"
+          list_songs_by_genre
+        when "play song"
+          play_song
+        end
+      end 
     end
   end
 
