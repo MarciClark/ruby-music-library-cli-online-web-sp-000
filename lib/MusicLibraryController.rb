@@ -1,5 +1,7 @@
 class MusicLibraryController
 
+  attr_accessor :path 
+
   def initialize(path = './db/mp3s')
     importer = MusicImporter.new(path)
     importer.import
@@ -56,7 +58,7 @@ class MusicLibraryController
 
   def list_artists
     Artist.all.sort{|a, b| a.name <=> b.name}.each_with_index do |a, i|
-      puts "#{i+1}. #{a.name}"
+      puts "#{i+1}. #{g.name}"
     end
   end
 
